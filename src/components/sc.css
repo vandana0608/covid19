@@ -1,0 +1,14 @@
+.d{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px 50px;
+}
+.t{
+    min-width: 700;
+}
