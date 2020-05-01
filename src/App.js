@@ -3,8 +3,7 @@ import {fetchData} from './api/';
 import Cards from './components/Cards';
 import SelectCountry from './components/SelectCountry';
 import Chart from './components/Chart';
-import Nav from './components/Nav'
-import Button from './components/Button';
+import Nav from './components/Nav';
 import New from './components/New';
 import styles from './components/App.css';
 import image from './image/images.jpg';
