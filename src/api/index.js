@@ -29,3 +29,14 @@ export const fetchCountries=async()=>{
     }
 }
 
+export const fetchState=async()=>{
+    try{
+        const data=await axios.get(`https://api.rootnet.in/covid19-in/stats/latest`)
+        const resp=data.data.regional
+        console.log(resp.map(d=>resp[d].loc));
+        return resp.map(d=>resp[d].loc);
+    }
+    catch(error){
+        return error;
+    }
+}

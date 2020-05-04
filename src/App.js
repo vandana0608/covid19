@@ -4,6 +4,7 @@ import Cards from './components/Cards';
 import SelectCountry from './components/SelectCountry';
 import Chart from './components/Chart';
 import Nav from './components/Nav';
+import SelectState from './components/SelectState';
 import New from './components/New';
 import styles from './components/App.css';
 import image from './image/images.jpg';
@@ -81,6 +82,7 @@ class App extends React.Component {
         </section>
         <section>
         <Nav indiaChange={this.indiaChange} globalChange={this.globalChange}/>
+
         </section>
         <section>
          <Cards confirmed={confirmed} deaths={deaths} recovered={recovered} lastUpdate={lastUpdate} />
@@ -88,6 +90,10 @@ class App extends React.Component {
 
          <section>
          <SelectCountry handleCountryChange={this.handleCountryChange} />
+         </section>
+
+         <section>
+         <SelectState  />
          </section>
 
          <section>

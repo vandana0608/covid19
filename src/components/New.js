@@ -34,7 +34,7 @@ export default class New extends Component {
     async componentDidMount() {
   
         const res=await axios.get('https://api.rootnet.in/covid19-in/stats/latest')
-        console.log(res.data.data.regional.deaths)
+        console.log(res.data.data.regional[1].deaths)
         this.setState({tableData:res.data.data.regional});
      }
     render() {
@@ -42,42 +42,8 @@ export default class New extends Component {
         
         return (
             
-            
-        //     <div className="tab-pane active " id="mytab">
-        //         <div>STATE WISE DIVISION OF INDIA</div>
-        //     <div className="inner-content table-responsive">
-        //       <table id="my_table" className="display" style={{ width: "100%" }}>
-        //         <thead>
-        //           <tr className="heading-table">
-        //             <th>STATE</th>
-        //             <th> CONFIRMED </th>
-        //             <th>RECOVERED</th>
-        //             <th>DEATHS</th>
-        //           </tr>
-        //         </thead>
-        //               <tbody>
-                          
-        //             {Object.keys(this.state.tableData).map(d => (
-                        
-        //               <tr key={d}>
-        //                 <td>{this.state.tableData[d].loc}</td>
-        //                 <td>{this.state.tableData[d].totalConfirmed}</td>
-        //                 <td>{this.state.tableData[d].discharged}</td>
-        //                 <td>{this.state.tableData[d].deaths}</td>
-        //               </tr>
-                    
-        //             ))}
-        //             {/* <tr>
-        //                 <td>1</td>
-        //                 <td>2</td>
-        //                 <td>3</td>
-        //                 <td>4</td>
-        //             </tr> */}
-        //           </tbody>
-                
-        //       </table>
-        //     </div>
-        //   </div>
+      
+         
           <TableContainer component={Paper}>
           <Table  className='t' aria-label="customized table">
             <TableHead>
